@@ -288,7 +288,7 @@ class BARTDecoder(nn.Module):
         past_key_values=None,
         use_cache: bool = None,
         attention_mask: torch.Tensor = None,
-        cache_position = None,
+        cache_position=None,
     ):
         """
         Args:
