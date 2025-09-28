@@ -1,0 +1,3 @@
+# Use local nougat
+-e ./third_party/nougat-0.1.0-base
+
