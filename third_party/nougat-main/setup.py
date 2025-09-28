@@ -4,6 +4,7 @@ Copyright (c) 2022-present NAVER Corp.
 MIT License
 Copyright (c) Meta Platforms, Inc. and affiliates.
 """
+
 import os
 from setuptools import find_packages, setup
 
@@ -33,30 +34,30 @@ setup(
     long_description_content_type="text/markdown",
     author="Lukas Blecher",
     author_email="lblecher@meta.com",
-    url="https://github.com/facebookresearch/donut",
+    url="https://github.com/facebookresearch/nougat",
     license="MIT",
     packages=find_packages(
         exclude=[
             "result",
         ]
     ),
-    py_modules=["predict","app","train","test"],
+    py_modules=["predict", "app", "train", "test"],
     python_requires=">=3.7",
     install_requires=[
-        # "transformers~=4.25.1",
+        # "transformers>=4.25.1,<=4.38.2",
         'transformers',
         "timm==0.5.4",
         "orjson",
         "opencv-python-headless",
         "datasets[vision]",
-        "pytorch-lightning>=1.8.5",
+        "lightning>=2.0.0,<2022",
         "nltk",
-        "python-Levenshtein",
+        "rapidfuzz",
         "sentencepiece",
         "sconf>=0.2.3",
-        "albumentations==1.4.24",
-        # "albucore==0.0.16",
-        "pymupdf",
+        "albumentations>=1.0.0,<=1.4.24",
+        "pypdf>=3.1.0",
+        "pypdfium2",
     ],
     extras_require={
         "api": [
@@ -73,6 +74,7 @@ setup(
             "fuzzysearch",
             "unidecode",
             "htmlmin",
+            "pdfminer.six>=20221105",
         ],
     },
     entry_points={

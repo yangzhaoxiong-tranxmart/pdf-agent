@@ -1,3 +1,11 @@
-# Use local nougat
--e ./third_party/nougat-0.1.0-base
+torch
+torchvision
+streamlit
+pypdf
+pypdf2
+pymupdf
+matplotlib
+accelerate
 
+# Use local nougat
+-e ./third_party/nougat-main
