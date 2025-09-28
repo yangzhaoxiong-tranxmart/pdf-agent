@@ -76,7 +76,7 @@ class StreamlitStreamer(TextStreamer):
 
 # 设置页面标题和布局
 st.set_page_config(
-    page_title="智能PDF阅读助手",
+    page_title="论文阅读助手",
     page_icon="📚",
     layout="wide"
 )
